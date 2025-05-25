@@ -21,7 +21,7 @@ public class MergeSort {
 
         int i = 0, j = 0, k = left;
         while (i < n1 && j < n2) {
-            array[k++] = (L[i] <= R[j]) ? L[i++] : R[j++];
+            array[k++] = (L[i] >= R[j]) ? L[i++] : R[j++];
         }
 
         while (i < n1) array[k++] = L[i++];
