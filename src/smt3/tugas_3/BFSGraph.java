@@ -1,4 +1,4 @@
-package tugas_3;
+package smt3.tugas_3;
 import java.util.*;
 
 public class BFSGraph {

@@ -1,4 +1,4 @@
-package tugas_2;
+package smt3.diskusi_3;
 public class MergeSort {
     public static void mergeSort(int[] array, int left, int right) {
         if (left < right) {
@@ -21,7 +21,7 @@ public class MergeSort {
 
         int i = 0, j = 0, k = left;
         while (i < n1 && j < n2) {
-            array[k++] = (L[i] >= R[j]) ? L[i++] : R[j++];
+            array[k++] = (L[i] <= R[j]) ? L[i++] : R[j++];
         }
 
         while (i < n1) array[k++] = L[i++];
@@ -29,16 +29,8 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int nilai1 = 5;
-        int nilai2 = 2;
-        int nilai3= 8;
-        int nilai4 = 9;
-        int nilai5 = -50;
-        int nilai6 = 78;
-        int[] data = {nilai1, nilai2, nilai3, nilai4, nilai5, nilai6};
-        
+        int[] data = {5, 2, 8, 1, 3};
         mergeSort(data, 0, data.length - 1);
-        
         System.out.println("Hasil Merge Sort:");
         for (int num : data) System.out.print(num + " ");
     }

@@ -1,4 +1,4 @@
-package diskusi_3;
+package smt3.tugas_2;
 
 public class CountingSort {
     public static void countingSort(int[] array) {
@@ -13,7 +13,7 @@ public class CountingSort {
         }
 
         int index = 0;
-        for (int i = 0; i < count.length; i++) {
+        for (int i = count.length - 1; i >= 0; i--) {
             while (count[i]-- > 0) {
                 array[index++] = i;
             }
@@ -21,8 +21,16 @@ public class CountingSort {
     }
 
     public static void main(String[] args) {
-        int[] data = {5, 2, 8, 1, 3};
+        int nilai1 = 8;
+        int nilai2 = 18;
+        int nilai3 = 2;
+        int nilai4 = 19;
+        int nilai5 = 11;
+        int nilai6 = 19;
+        int[] data = {nilai1, nilai2, nilai3, nilai4, nilai5, nilai6};
+
         countingSort(data);
+        
         System.out.println("Hasil Counting Sort:");
         for (int num : data) System.out.print(num + " ");
     }
